@@ -1,0 +1,6 @@
+18:02:33: From railway
+18:02:36: Everything is OK
+18:02:38: No dangers
+18:05:32: No dangers
+18:09:06: test message
+18:10:58: test message///

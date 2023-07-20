@@ -1,0 +1,11 @@
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.settings-icon {
+  width: 60px;
+  height: 60px;
+}

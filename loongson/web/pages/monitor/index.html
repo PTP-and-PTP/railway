@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>实时监控</title>
+  <style>
+   body
+   {
+	background-color:#b0c4de;
+	background-size:100% 110%;
+   }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="description" content="铁路安全实时监测系统">
+  <meta name="keywords" content="铁路, 安全, 障碍监测">
+</head>
+<body>
+
+  <iframe src="/include/title-bar.html" scrolling="no" overflow="hidden" width="100%"
+    height="50px" frameborder="0"></iframe>
+  
+  <img id="imageElement" src="scene.jpg" alt="Image">
+
+  <video id="videoElement" autoplay style="margin-left:25%;margin-top:25px">
+    <script>
+        function refreshImage() {
+            const imageElement = document.getElementById('imageElement');
+            const newImageSrc = 'scene.jpg';
+            imageElement.src = newImageSrc;
+        }
+
+        setInterval(refreshImage, 1000);
+    </script>
+  </video>
+ 
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/clock.css">
+  <script>
+    function updateClock() {
+          var now = new Date();
+          var hours = now.getHours();
+          var minutes = now.getMinutes();
+          var seconds = now.getSeconds();
+          var day = now.toLocaleDateString('zh-CN', { weekday: 'long' });
+          var month = now.toLocaleDateString('zh-CN', { month: 'long' });
+          var date = now.getDate();
+          var year = now.getFullYear();
+
+          hours = (hours < 10) ? "0" + hours : hours;
+          minutes = (minutes < 10) ? "0" + minutes : minutes;
+          seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+          var time = hours + ":" + minutes + ":" + seconds;
+          var fullDate = day + ", " + month + " " + date + ", " + year;
+
+          document.getElementById("time").innerHTML = time;
+          document.getElementById("date").innerHTML = fullDate;
+
+          setTimeout(updateClock, 1000);
+        }
+  </script>
+</head>
+<body onload="updateClock()">
+  <div id="clock">
+  <h1>欢迎使用智能轨道检测系统！</h1>
+    <div id="clock">
+        <div id="time"></div>
+        <div id="date"></div>
+    </div>
+  </div>
+</body>
+</html>
